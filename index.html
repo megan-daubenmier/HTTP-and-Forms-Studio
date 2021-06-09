@@ -12,11 +12,14 @@
 			};
 			let form = document.getElementById('searchForm'); 
 			let selectedEngine = document.querySelector('input[name=engine]:checked');
-			let action = actions[selectedEngine.value];
-			if(action === '' || !document.getElementById('q')) {
+			// alert(selectedEngine);
+			// alert(document.getElementById('qId'));
+			if(!document.getElementById('qId').value || !selectedEngine) {
 				alert('Please fill out all fields!');
+			} else {
+				let action = actions[selectedEngine.value];
+				form.setAttribute('action', action);			
 			}
-			form.setAttribute('action', action);			
 		}
     window.addEventListener("load", function(){
         let form = document.getElementById('searchForm');
@@ -28,7 +31,7 @@
 <body>
 
 	<form id="searchForm">
-		<input type='text' name='q'/>
+		<input type='text' name='q' id='qId'/>
 		<label>
 			<input type='radio' name='engine' value='google'/>
 			Google
