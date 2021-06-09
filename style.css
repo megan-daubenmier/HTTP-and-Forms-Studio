@@ -1,0 +1,12 @@
+#searchForm {
+    text-align: center;
+    margin-top: 200px
+}
+
+#goButton {
+    height: 40px;
+    width: 50px;
+    font-size: large;
+    background-color: gold;
+    font-family: sans-serif;
+}

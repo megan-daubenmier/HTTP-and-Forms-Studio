@@ -2,6 +2,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<link rel = "stylesheet" type = "text/css" href = "style.css">
 	<script>
 		function setSearchEngine() {
 			let actions = {
@@ -12,8 +13,6 @@
 			};
 			let form = document.getElementById('searchForm'); 
 			let selectedEngine = document.querySelector('input[name=engine]:checked');
-			// alert(selectedEngine);
-			// alert(document.getElementById('qId'));
 			if(!document.getElementById('qId').value || !selectedEngine) {
 				alert('Please fill out all fields!');
 			} else {
@@ -32,23 +31,25 @@
 
 	<form id="searchForm">
 		<input type='text' name='q' id='qId'/>
+		<br></br>
 		<label>
 			<input type='radio' name='engine' value='google'/>
-			Google
 		</label>
+		<img src="images/googleLogo.png" width = 100px/>
 		<label>
 			<input type='radio' name='engine' value='duckDuckGo'/>
-			DuckDuckGo
 		</label>
+		<img src="images/duckDuckGo.png" width = 100px/>
 		<label>
 			<input type='radio' name='engine' value='bing'/>
-			Bing
 		</label>
+		<img src="images/bingLogo.png" width = 100px/>
 		<label>
 			<input type='radio' name='engine' value='ask'/>
-			Ask
 		</label>
-		<button type='submit'>Go!</button>
+		<img src="images/askLogo.png" width = 100px/>
+		<br></br>
+		<button type='submit' id='goButton'>Go!</button>
 	</form>
 
 </body>
